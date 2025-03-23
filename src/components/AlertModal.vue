@@ -16,7 +16,7 @@ function closeModal() {
         <p>Are you sure you want to close all modal?</p>
       </div>
       <div class="modal-footer">
-        <button class="alert-button" @click="closeModal">Close</button>
+        <input class="alert-button" type="button" value="Close" @click="closeModal" autofocus />
       </div>
     </div>
   </ModalBase>
@@ -37,5 +37,9 @@ function closeModal() {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.alert-button:focus {
+  outline: blue auto 5px;
 }
 </style>

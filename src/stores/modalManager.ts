@@ -26,6 +26,7 @@ export const useModalStore = defineStore('modal', () => {
   const modalStack = ref<AppListItem[]>([])
   function openModal(type: ModalTypes) {
     const modalContainer = document.createElement('div')
+    modalContainer.classList.add('modal-container')
     document.body.appendChild(modalContainer)
     const ModalComponent = getModalComponent(type)
     const app = createApp(ModalComponent, {
